@@ -11,7 +11,7 @@ export default class Login extends Component {
   render() {
     return (
       <Container flex={1}>
-        <Container>
+        <Container flex={1}>
           <Image
             source={images.logo}
             style={{ alignSelf: "center", width: 140, height: 140 }}

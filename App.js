@@ -6,6 +6,7 @@ import Login from "./screens/Auth/Login";
 import * as Font from "expo-font";
 import Signup from "./screens/Auth/Signup";
 import Home from "./screens/Home/Home";
+import Category from "./screens/Category/Category";
 export default function App() {
   const [loaded, setLoaded] = useState(null);
   const loadFonts = async () => {
@@ -28,9 +29,10 @@ export default function App() {
   }
   return (
     <Container flex={1} mt={60}>
-      <Login />
+      {/* <Login /> */}
       {/* <Signup /> */}
       {/* <Home /> */}
+      <Category />
     </Container>
   );
 }

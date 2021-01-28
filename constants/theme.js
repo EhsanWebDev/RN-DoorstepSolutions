@@ -8,6 +8,7 @@ export const colors = {
   gray: "#707070",
   muted: "#A6A6A6",
   white: "#fff",
+  black: "#000",
   dark: "#323232",
   dark2: "#404040",
   borderColor: "#DADADA",

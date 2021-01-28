@@ -11,19 +11,21 @@ export default class Signup extends Component {
   render() {
     return (
       <Container flex={1}>
-        <Image
-          source={images.logo}
-          style={{ alignSelf: "center", width: 140, height: 140 }}
-        />
-        <GeneralText size={34} bold center mt={20}>
-          Create New Account
-        </GeneralText>
-        <Container flex={2}>
-          <Container flex={1} direction="row" justify="space-between">
+        <Container flex={1}>
+          <Image
+            source={images.logo}
+            style={{ alignSelf: "center", width: 140, height: 140 }}
+          />
+          <GeneralText size={34} bold center mt={20}>
+            Create New Account
+          </GeneralText>
+        </Container>
+        <Container flex={1.5}>
+          <Container flex={0} direction="row" justify="space-between">
             <Input label="First Name" placeholder="John" />
             <Input label="Last Name" placeholder="Doe" />
           </Container>
-          <Container flex={2}>
+          <Container flex={1}>
             <Input label="User name or Email" placeholder="johnDoe@email.co" />
             <Input label="Password" placeholder="********" />
           </Container>
