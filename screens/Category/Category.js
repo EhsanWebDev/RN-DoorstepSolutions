@@ -3,13 +3,14 @@ import { ScrollView, Text, View } from "react-native";
 import Container from "../../components/Container";
 import Header from "../../components/Header";
 import CatComp from "../../components/Home/CategoryCard";
+import CategoryItem from "../../components/Home/CategoryItem";
 import Pill from "../../components/Pill";
 import SearchBar from "../../components/SearchBar";
 
 export default class Category extends Component {
   render() {
     return (
-      <ScrollView style={{ flex: 1 }}>
+      <Container styles={{ flex: 1 }}>
         <Header showBack />
         <SearchBar showFilter />
         <ScrollView
@@ -23,7 +24,15 @@ export default class Category extends Component {
           <Pill label="Category 3" />
           <Pill label="Category 4" />
         </ScrollView>
-      </ScrollView>
+
+        <ScrollView style={{ marginVertical: 20 }}>
+          <CategoryItem />
+          <CategoryItem />
+          <CategoryItem />
+          <CategoryItem />
+          <CategoryItem />
+        </ScrollView>
+      </Container>
     );
   }
 }
