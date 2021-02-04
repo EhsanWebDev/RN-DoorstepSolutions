@@ -4,7 +4,7 @@ import { FontAwesome, Feather } from "@expo/vector-icons";
 import Container from "./Container";
 import { colors, sizes } from "../constants/theme";
 
-const SearchBar = ({ showFilter }) => {
+const SearchBar = ({ showFilter, onFilterPress }) => {
   return (
     <Container
       mh={sizes.m_sm * 1.2}
@@ -36,7 +36,10 @@ const SearchBar = ({ showFilter }) => {
         />
       </Container>
       {showFilter && (
-        <TouchableOpacity style={{ backgroundColor: "#f1f2f6", padding: 10 }}>
+        <TouchableOpacity
+          style={{ backgroundColor: "#f1f2f6", padding: 10 }}
+          onPress={onFilterPress}
+        >
           <FontAwesome name="filter" size={24} color={colors.gray} />
         </TouchableOpacity>
       )}

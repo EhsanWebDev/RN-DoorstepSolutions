@@ -20,11 +20,11 @@ const CategoryItem = () => {
           </Container>
           <Container ml={10}>
             <GeneralText size={20}>Delivery Company</GeneralText>
-            <StarRatings stars={4} />
+            <StarRatings showCount stars={4} />
           </Container>
         </Container>
-        <Container bg="#474787" pv={8} ph={16}>
-          <GeneralText color="#f7f1e3" size={13}>
+        <Container bg="#FCF3ED" pv={8} ph={16}>
+          <GeneralText color="#FDD8B6" size={14} bold>
             Category
           </GeneralText>
         </Container>

@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import GeneralText from "./GeneralText";
 import { colors } from "../constants/theme";
 
-const StarRatings = ({ stars }) => {
+const StarRatings = ({ stars, size, showCount }) => {
   const retStars = () => {
     let totalStars = [];
     for (let index = 1; index <= 5; index++) {
@@ -16,7 +16,12 @@ const StarRatings = ({ stars }) => {
       }
       // Push the Image tag in the stars array
       totalStars.push(
-        <MaterialCommunityIcons name={path} size={18} color="green" />
+        <MaterialCommunityIcons
+          key={index}
+          name={path}
+          size={size ? size : 18}
+          color={path === "star" ? "#33B199" : "#77869E"}
+        />
       );
     }
     return totalStars;
@@ -27,12 +32,13 @@ const StarRatings = ({ stars }) => {
       <Container direction="row" justify="center" mr={10}>
         {retStars()}
       </Container>
-
-      <GeneralText
-        mt={5}
-        color={colors.muted}
-        size={15}
-      >{`${stars}.0`}</GeneralText>
+      {showCount && (
+        <GeneralText
+          mt={5}
+          color={colors.muted}
+          size={15}
+        >{`${stars}.0`}</GeneralText>
+      )}
     </Container>
   );
 };

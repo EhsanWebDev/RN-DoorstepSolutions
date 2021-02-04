@@ -14,6 +14,7 @@ const Button = ({
   iconName,
   social,
   mt = sizes.m_sm * 3,
+  handlePress,
 }) => {
   return (
     <Container
@@ -33,6 +34,7 @@ const Button = ({
           justifyContent: social ? "center" : "flex-start",
           alignItems: "center",
         }}
+        onPress={handlePress}
       >
         {social && (
           <MaterialCommunityIcons
