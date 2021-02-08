@@ -11,7 +11,8 @@ const Notofication = require("../assets/icons/Notofication.png");
 const Back = require("../assets/icons/Back.png");
 const Search = require("../assets/icons/Search.png");
 import { Feather } from "@expo/vector-icons";
-const Header = ({ showBack }) => {
+import Avatar from "./Avatar";
+const Header = ({ showBack, withoutNotifications }) => {
   return (
     <Container
       ph={sizes.p_sm * 1.2}
@@ -19,7 +20,21 @@ const Header = ({ showBack }) => {
       justify="space-between"
       align="center"
     >
-      {showBack ? (
+      {withoutNotifications && (
+        <Container direction="row" align="center">
+          <MaterialCommunityIcons
+            name="keyboard-backspace"
+            size={30}
+            color="black"
+            style={{ marginHorizontal: 10, marginRight: 10 }}
+          />
+          <Avatar sm rounded />
+          <GeneralText bold size={24} ml={10}>
+            Business Name
+          </GeneralText>
+        </Container>
+      )}
+      {showBack && (
         <Container
           flex={1}
           align="center"
@@ -49,7 +64,9 @@ const Header = ({ showBack }) => {
             <Feather name="bell" size={30} color="black" />
           </Container>
         </Container>
-      ) : (
+      )}
+
+      {!showBack && !withoutNotifications && (
         <Container
           flex={1}
           direction="row"

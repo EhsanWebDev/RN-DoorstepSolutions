@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 import {
-  Alert,
   Modal,
   ScrollView,
   StyleSheet,
-  Text,
-  TouchableHighlight,
-  TouchableOpacity,
   TouchableWithoutFeedback,
   View,
 } from "react-native";

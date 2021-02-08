@@ -19,4 +19,5 @@ export const images = {
   // Icons
   cancel: require("../assets/icons/Cencel.png"),
   logo: require("../assets/Logo.png"),
+  location: require("../assets/location.jpg"),
 };
