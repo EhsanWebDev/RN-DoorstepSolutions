@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import GeneralText from "./GeneralText";
 import { colors } from "../constants/theme";
 
-const StarRatings = ({ stars, size, showCount }) => {
+const StarRatings = ({ stars, size, showCount, bg }) => {
   const retStars = () => {
     let totalStars = [];
     for (let index = 1; index <= 5; index++) {
@@ -28,13 +28,14 @@ const StarRatings = ({ stars, size, showCount }) => {
   };
 
   return (
-    <Container direction="row" align="center">
-      <Container direction="row" justify="center" mr={10}>
+    <Container flex={1} direction="row" align="center">
+      <Container direction="row" bg={bg ? bg : "white"}>
         {retStars()}
       </Container>
       {showCount && (
         <GeneralText
           mt={5}
+          ml={10}
           color={colors.muted}
           size={15}
         >{`${stars}.0`}</GeneralText>

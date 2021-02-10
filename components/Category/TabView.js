@@ -5,6 +5,7 @@ import { colors, layout } from "../../constants/theme";
 import Container from "../Container";
 import GeneralText from "../GeneralText";
 import AboutPage from "./AboutPage";
+import ReviewsPage from "./ReviewsPage";
 import ServicesPage from "./ServicesPage";
 
 const TabView = () => {
@@ -75,6 +76,7 @@ const TabView = () => {
       </Container>
       {active === 1 && <AboutPage />}
       {active === 2 && <ServicesPage />}
+      {active === 3 && <ReviewsPage />}
     </Container>
   );
 };
