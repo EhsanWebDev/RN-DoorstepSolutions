@@ -12,11 +12,13 @@ const SpecialButton = ({
   warningLight,
   label = "Button",
   full,
+  ph,
+  pv,
 }) => {
   return (
     <Container
-      pv={10}
-      ph={30}
+      pv={pv ? pv : 10}
+      ph={ph ? ph : 20}
       mv={10}
       styles={(!full && { alignSelf: "flex-start" }) || {}}
       bg={

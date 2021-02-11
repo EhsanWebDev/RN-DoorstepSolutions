@@ -22,9 +22,11 @@ const GeneralText = ({
   pr,
   pb,
   pl,
+  lines,
 }) => {
   return (
     <Text
+      numberOfLines={lines ? lines : 1}
       style={[
         {
           color: color ? color : "#000",

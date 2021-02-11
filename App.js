@@ -8,6 +8,7 @@ import Signup from "./screens/Auth/Signup";
 import Home from "./screens/Home/Home";
 import Category from "./screens/Category/Category";
 import CategoryDetails from "./screens/Category/CategoryDetails";
+import BookingDetails from "./screens/Booking/BookingDetails";
 export default function App() {
   const [loaded, setLoaded] = useState(null);
   const loadFonts = async () => {
@@ -34,7 +35,8 @@ export default function App() {
       {/* <Signup /> */}
       {/* <Home /> */}
       {/* <Category /> */}
-      <CategoryDetails />
+      {/* <CategoryDetails /> */}
+      <BookingDetails />
     </Container>
   );
 }

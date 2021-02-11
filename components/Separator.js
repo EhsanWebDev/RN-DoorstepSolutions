@@ -5,14 +5,13 @@ import Container from "./Container";
 
 // import { Container } from './styles';
 
-const Separator = () => {
+const Separator = ({ mv, mh }) => {
   return (
     <Container
-      mv={20}
-      mh={12}
+      mv={mv ? mv : 20}
+      mh={mh ? mh : 12}
       styles={{
-        width: layout.width,
-        height: 1.5,
+        height: 1,
         backgroundColor: "#C5CAD2",
       }}
     />
