@@ -9,6 +9,9 @@ import Home from "./screens/Home/Home";
 import Category from "./screens/Category/Category";
 import CategoryDetails from "./screens/Category/CategoryDetails";
 import BookingDetails from "./screens/Booking/BookingDetails";
+import ConfirmBooking from "./screens/Booking/ConfirmBooking";
+import Notifications from "./screens/Notifications/Notifications";
+import Buy from "./screens/BuyProducts/Buy";
 export default function App() {
   const [loaded, setLoaded] = useState(null);
   const loadFonts = async () => {
@@ -36,7 +39,10 @@ export default function App() {
       {/* <Home /> */}
       {/* <Category /> */}
       {/* <CategoryDetails /> */}
-      <BookingDetails />
+      {/* <BookingDetails /> */}
+      {/* <ConfirmBooking /> */}
+      {/* <Notifications /> */}
+      <Buy />
     </Container>
   );
 }

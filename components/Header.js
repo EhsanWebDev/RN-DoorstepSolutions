@@ -4,15 +4,31 @@ import { images } from "../constants/images";
 import { colors, layout, sizes } from "../constants/theme";
 import Container from "./Container";
 import GeneralText from "./GeneralText";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-const MenuBar = require("../assets/icons/MenuBar.png");
-const filter = require("../assets/icons/filter.png");
-const Notofication = require("../assets/icons/Notofication.png");
-const Back = require("../assets/icons/Back.png");
-const Search = require("../assets/icons/Search.png");
-import { Feather } from "@expo/vector-icons";
+import { MaterialCommunityIcons, Entypo, Feather } from "@expo/vector-icons";
+
 import Avatar from "./Avatar";
-const Header = ({ showBack, withoutNotifications }) => {
+const Header = ({
+  showBack,
+  withoutNotifications,
+  withoutAvatar,
+  notifications,
+}) => {
+  if (notifications) {
+    return (
+      <Container direction="row" justify="space-between" align="center" mh={20}>
+        <Container direction="row" align="center">
+          <Container bg="#E9F8FE" p={15} styles={{ borderRadius: 24 }}>
+            <Feather name="bell" size={24} color={colors.primary2} />
+          </Container>
+          <GeneralText bold size={30} ml={20}>
+            Notifications
+          </GeneralText>
+        </Container>
+
+        <Entypo name="cross" size={24} color="black" />
+      </Container>
+    );
+  }
   return (
     <Container
       ph={sizes.p_sm * 1.2}
@@ -28,7 +44,8 @@ const Header = ({ showBack, withoutNotifications }) => {
             color="black"
             style={{ marginHorizontal: 10, marginRight: 10 }}
           />
-          <Avatar sm rounded />
+          {!withoutAvatar && <Avatar sm rounded />}
+
           <GeneralText bold size={24} ml={10}>
             Business Name
           </GeneralText>

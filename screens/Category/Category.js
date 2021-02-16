@@ -72,7 +72,7 @@ export default class Category extends Component {
                   </GeneralText>
                 </Container>
 
-                <Container align="center">
+                <Container flex={1} align="center" mv={30}>
                   <StarRatings stars={3} showCount={false} size={70} />
                 </Container>
 

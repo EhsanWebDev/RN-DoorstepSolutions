@@ -1,5 +1,6 @@
 import React from "react";
 import { TouchableOpacity, View } from "react-native";
+import { colors } from "../constants/theme";
 import Container from "./Container";
 import GeneralText from "./GeneralText";
 
@@ -14,13 +15,19 @@ const SpecialButton = ({
   full,
   ph,
   pv,
+  labelSize,
 }) => {
   return (
     <Container
       pv={pv ? pv : 10}
       ph={ph ? ph : 20}
       mv={10}
-      styles={(!full && { alignSelf: "flex-start" }) || {}}
+      styles={
+        (!full && {
+          alignSelf: "flex-start",
+        }) ||
+        {}
+      }
       bg={
         (primary && "#2575FC") ||
         (primaryLight && "#E8F1FF") ||
@@ -31,6 +38,7 @@ const SpecialButton = ({
     >
       <TouchableOpacity>
         <GeneralText
+          size={labelSize ? labelSize : 16}
           color={
             (primary && "white") ||
             (primaryLight && "#2575FC") ||

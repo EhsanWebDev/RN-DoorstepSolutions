@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import Container from "../../components/Container";
 import GeneralText from "../../components/GeneralText";
 import {
@@ -267,22 +267,24 @@ export default class BookingDetails extends Component {
             p={14}
             bg="#F6F7FB"
           >
-            <GeneralText color="#A9B3C3">Add Location</GeneralText>
+            <TextInput
+              style={{ flex: 1 }}
+              placeholder="Add Location"
+              placeholderTextColor="#A9B3C3"
+            />
             <Entypo name="location" size={24} color="#A9B3C3" />
           </Container>
         </Container>
-        <Container mt={14}>
+        <Container mt={14} flex={1}>
           <GeneralText>Additional Notes</GeneralText>
-          <Container
-            direction="row"
-            align="center"
-            justify="space-between"
-            p={14}
-            bg="#F6F7FB"
-          >
-            <GeneralText styles={{ height: 60 }} color="#A9B3C3">
-              Lorem ipsum is a very good old tool for text
-            </GeneralText>
+          <Container direction="row" flex={1} p={14} bg="#F6F7FB">
+            <TextInput
+              style={{ flex: 1, height: 200, textAlignVertical: "top" }}
+              multiline
+              numberOfLines={8}
+              placeholder="Lorem ipsum is a very good old tool for text"
+              placeholderTextColor="#A9B3C3"
+            />
           </Container>
         </Container>
         <Separator mh={1} mv={16} />
