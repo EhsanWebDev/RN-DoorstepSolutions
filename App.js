@@ -12,6 +12,7 @@ import BookingDetails from "./screens/Booking/BookingDetails";
 import ConfirmBooking from "./screens/Booking/ConfirmBooking";
 import Notifications from "./screens/Notifications/Notifications";
 import Buy from "./screens/BuyProducts/Buy";
+import BuyDetails from "./screens/BuyProducts/BuyDetails";
 export default function App() {
   const [loaded, setLoaded] = useState(null);
   const loadFonts = async () => {
@@ -42,7 +43,8 @@ export default function App() {
       {/* <BookingDetails /> */}
       {/* <ConfirmBooking /> */}
       {/* <Notifications /> */}
-      <Buy />
+      {/* <Buy /> */}
+      <BuyDetails />
     </Container>
   );
 }

@@ -29,11 +29,12 @@ const StarRatings = ({ stars, size, showCount, bg }) => {
 
   return (
     <Container flex={1} direction="row" align="center">
-      <Container direction="row" bg={bg ? bg : "white"}>
+      <Container flex={0.3} direction="row" bg={bg ? bg : "white"}>
         {retStars()}
       </Container>
       {showCount && (
         <GeneralText
+          styles={{ flex: 1, justifyContent: "flex-start" }}
           mt={5}
           ml={10}
           color={colors.muted}
